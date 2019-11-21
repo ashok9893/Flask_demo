@@ -34,7 +34,7 @@ dataset.head()
 # In[3]:
 
 
-print dataset['Outcome'].value_counts()
+#print dataset['Outcome'].value_counts()
 
 
 # In[20]:
