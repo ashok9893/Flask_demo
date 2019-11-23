@@ -20,7 +20,7 @@ def predict():
 
     output = round(prediction[0], 7)
 
-    return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
+    return render_template('index.html', prediction_text='Here is your result- 1-yes 0-no $ {}'.format(output))
 
 
 if __name__ == "__main__":
