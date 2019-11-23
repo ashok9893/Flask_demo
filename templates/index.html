@@ -1,41 +1,57 @@
 <!DOCTYPE html>
-<html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
-<head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
-</head>
-
-<body>
- <div class="login">
-	<h1>diabetes test</h1>
-
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" />
-        <input type="text" name="Glucose" placeholder="Glucose" required="required" />
-		<input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" />
-		<input type="text" name="SkinThickness" placeholder="SkinThickness" required="required" />
-        <input type="text" name="Insulin" placeholder="Insulin" required="required" />
-		<input type="text" name="BMI" placeholder="BMI" required="required" />
-		<input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required="required" />
-        <input type="text" name="Age" placeholder="Age" required="required" />
-		
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-
-   <br>
-   <br>
-   {{ prediction_text }}
-
- </div>
-
-
-</body>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Test your health</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="inex.css">
+    </head>
+    <body>
+        
+        
+        <header>
+        <div class="container">  
+            
+              <div id="branding">
+            <h1>Diabeties Test</h1>
+                  </div>
+            </div>
+        </header>
+        
+        <div class="label1">
+        
+        <h2>Know your Health here</h2>
+        </div>
+        
+        <div class="container">
+        <div class="form">
+        
+        <form action="{{ url_for('predict')}}"method="post">
+        
+        <label>
+            <input type="text" name="Pregnancies" value=""  placeholder="Preganacy" required="required"><br>
+            </label>
+            <label></label>
+        <input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
+            <label></label>
+		<input type="text" name="BloodPressure" placeholder="Blood Pressure" required="required" /><br>
+            <label></label>
+		<input type="text" name="SkinThickness" placeholder="Skin Thickness" required="required" /><br>
+            <label></label>
+        <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
+            <label></label>
+		<input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+            <label></label>
+		<input type="text" name="DiabetesPedigreeFunction" placeholder="Diabetes function" required="required" /><br>
+            <label></label>
+        <input type="text" name="Age" placeholder="Age" required="required" /><br>
+            
+            <button type="submit" name=""btn btn-primary btn-block btn-large">Predict</button>
+            
+        </form>
+        </div>
+            </div>
+    </body>
 </html>
